@@ -74,7 +74,7 @@ export default function App() {
           {phase >= 1 && (
             <div className="text-terminal-dim text-sm tracking-[0.2em] mt-2">
               <TypeWriter
-                text="REDUCTIVE SYSTEMS ARCHITECTURE"
+                text="FUNDAMENTAL LAWS, AUTONOMOUS LOGIC"
                 speed={40}
                 onComplete={() => setPhase(2)}
               />
@@ -97,7 +97,7 @@ export default function App() {
               {phase >= 4 && (
                 <p className="mt-6">
                   <TypeWriter
-                    text="Every system is governed by a fundamental Law—a Nomos. When the noise is eliminated, the logic becomes autonomous."
+                    text="Every system is governed by a fundamental Law—a Nomos. When the noise is eliminated, autonomy emerges."
                     speed={10}
                     onComplete={() => setPhase(5)}
                   />
