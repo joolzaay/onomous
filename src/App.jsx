@@ -64,9 +64,6 @@ export default function App() {
       <div className="max-w-3xl mx-auto px-4 py-12 md:py-20 space-y-0">
         {/* Header */}
         <div className="border border-terminal-border p-6 md:p-8">
-          <div className="text-terminal-muted text-xs tracking-[0.3em] mb-6">
-            {'>'} IDENTITY
-          </div>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-2">
             <TypeWriter
               text="ONOMOUS"
@@ -88,7 +85,6 @@ export default function App() {
         {/* Thesis */}
         {phase >= 2 && (
           <Section>
-            <SectionLabel>{'>'} THESIS</SectionLabel>
             <div className="space-y-4 text-terminal-dim leading-relaxed">
               <p className="text-terminal-green text-lg">
                 <TypeWriter text="Complexity is a debt." speed={15} onComplete={() => setPhase(3)} />
