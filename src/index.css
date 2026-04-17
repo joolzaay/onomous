@@ -2,9 +2,9 @@
 
 @theme {
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
-  --color-terminal-green: #00ff41;
-  --color-terminal-dim: #00cc33;
-  --color-terminal-muted: #007a1f;
+  --color-terminal-green: #ffffff;
+  --color-terminal-dim: #cccccc;
+  --color-terminal-muted: #666666;
   --color-terminal-bg: #0a0a0a;
   --color-terminal-surface: #111111;
   --color-terminal-border: #1a1a1a;
