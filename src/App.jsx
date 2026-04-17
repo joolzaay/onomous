@@ -107,50 +107,36 @@ export default function App() {
           </Section>
         )}
 
-        {/* Mission */}
-        {phase >= 5 && (
-          <Section>
-            <SectionLabel>{'>'} MISSION</SectionLabel>
-            <p className="text-terminal-dim leading-relaxed italic border-l-2 border-terminal-muted pl-4">
-              <TypeWriter
-                text={`"To derive the fundamental laws of any system—digital, biological, or protocol-based—and reduce them to their most efficient, autonomous, and resilient essence."`}
-                speed={10}
-                onComplete={() => setPhase(6)}
-              />
-            </p>
-          </Section>
-        )}
-
         {/* Domains */}
-        {phase >= 6 && (
+        {phase >= 5 && (
           <Section>
             <SectionLabel>{'>'} DOMAINS</SectionLabel>
             <div className="space-y-6">
               <div>
                 <div className="text-terminal-green text-sm mb-1">
-                  <TypeWriter text="01 // SOFTWARE" speed={15} onComplete={() => setPhase(7)} />
+                  <TypeWriter text="01 // SOFTWARE" speed={15} onComplete={() => setPhase(6)} />
                 </div>
-                {phase >= 7 && (
+                {phase >= 6 && (
                   <p className="text-terminal-dim text-sm leading-relaxed">
                     <TypeWriter
                       text="Reducing monolithic codebases into agentic, self-governing logic."
                       speed={10}
-                      onComplete={() => setPhase(8)}
+                      onComplete={() => setPhase(7)}
                     />
                   </p>
                 )}
               </div>
-              {phase >= 8 && (
+              {phase >= 7 && (
                 <div>
                   <div className="text-terminal-green text-sm mb-1">
-                    <TypeWriter text="02 // BIOLOGICAL + FUNDAMENTAL" speed={15} onComplete={() => setPhase(9)} />
+                    <TypeWriter text="02 // BIOLOGICAL + FUNDAMENTAL" speed={15} onComplete={() => setPhase(8)} />
                   </div>
-                  {phase >= 9 && (
+                  {phase >= 8 && (
                     <p className="text-terminal-dim text-sm leading-relaxed">
                       <TypeWriter
                         text="Distilling complex sequences into fundamental, executable laws."
                         speed={10}
-                        onComplete={() => setPhase(10)}
+                        onComplete={() => setPhase(9)}
                       />
                     </p>
                   )}
@@ -160,43 +146,21 @@ export default function App() {
           </Section>
         )}
 
-        {/* Execution */}
-        {phase >= 10 && (
-          <Section>
-            <SectionLabel>{'>'} EXECUTION</SectionLabel>
-            <div className="space-y-2 text-terminal-dim">
-              <p>
-                <TypeWriter text="We find the simplest version of the truth." speed={15} onComplete={() => setPhase(11)} />
-              </p>
-              {phase >= 11 && (
-                <p>
-                  <TypeWriter text="We eliminate the noise." speed={15} onComplete={() => setPhase(12)} />
-                </p>
-              )}
-              {phase >= 12 && (
-                <p className="text-terminal-green">
-                  <TypeWriter text="We deliver the essence." speed={15} onComplete={() => setPhase(13)} />
-                </p>
-              )}
-            </div>
-          </Section>
-        )}
-
         {/* Contact */}
-        {phase >= 13 && (
+        {phase >= 9 && (
           <Section>
             <SectionLabel>{'>'} CONTACT</SectionLabel>
             <a
               href="mailto:julian@onomous.ai"
               className="text-terminal-green hover:underline underline-offset-4"
             >
-              <TypeWriter text="julian@onomous.ai" speed={20} onComplete={() => setPhase(14)} />
+              <TypeWriter text="julian@onomous.ai" speed={20} onComplete={() => setPhase(10)} />
             </a>
           </Section>
         )}
 
         {/* Footer */}
-        {phase >= 14 && (
+        {phase >= 10 && (
           <div className="border border-terminal-border p-6 md:p-8 text-center">
             <div className="text-terminal-muted text-xs tracking-[0.3em]">
               <TypeWriter text="NOMOS // ONOMA // ONOMOUS" speed={25} />
