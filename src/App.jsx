@@ -85,90 +85,127 @@ export default function App() {
           )}
         </div>
 
+        {/* Thesis */}
         {phase >= 2 && (
-          <>
-            {/* Thesis */}
-            <Section>
-              <SectionLabel>{'>'} THESIS</SectionLabel>
-              <div className="space-y-4 text-terminal-dim leading-relaxed">
-                <p className="text-terminal-green text-lg">
-                  Complexity is a debt.
-                </p>
-                <p>Onomous builds by distillation.</p>
-                <p className="mt-6">
-                  Every system is governed by a fundamental Law—a{' '}
-                  <span className="text-terminal-green">Nomos</span>.
-                  <br />
-                  When the noise is eliminated, the logic becomes autonomous.
-                </p>
-              </div>
-            </Section>
-
-            {/* Mission */}
-            <Section>
-              <SectionLabel>{'>'} MISSION</SectionLabel>
-              <p className="text-terminal-dim leading-relaxed italic border-l-2 border-terminal-muted pl-4">
-                "To derive the fundamental laws of any system—digital,
-                biological, or protocol-based—and reduce them to their most
-                efficient, autonomous, and resilient essence."
+          <Section>
+            <SectionLabel>{'>'} THESIS</SectionLabel>
+            <div className="space-y-4 text-terminal-dim leading-relaxed">
+              <p className="text-terminal-green text-lg">
+                <TypeWriter text="Complexity is a debt." speed={15} onComplete={() => setPhase(3)} />
               </p>
-            </Section>
-
-            {/* Domains */}
-            <Section>
-              <SectionLabel>{'>'} DOMAINS</SectionLabel>
-              <div className="space-y-6">
-                <div>
-                  <div className="text-terminal-green text-sm mb-1">
-                    01 // SOFTWARE
-                  </div>
-                  <p className="text-terminal-dim text-sm leading-relaxed">
-                    Reducing monolithic codebases into agentic, self-governing
-                    logic.
-                  </p>
-                </div>
-                <div>
-                  <div className="text-terminal-green text-sm mb-1">
-                    02 // BIOLOGICAL + FUNDAMENTAL
-                  </div>
-                  <p className="text-terminal-dim text-sm leading-relaxed">
-                    Distilling complex sequences into fundamental, executable
-                    laws.
-                  </p>
-                </div>
-              </div>
-            </Section>
-
-            {/* Execution */}
-            <Section>
-              <SectionLabel>{'>'} EXECUTION</SectionLabel>
-              <div className="space-y-2 text-terminal-dim">
+              {phase >= 3 && (
                 <p>
-                  We find the simplest version of the truth.
+                  <TypeWriter text="Onomous builds by distillation." speed={15} onComplete={() => setPhase(4)} />
                 </p>
-                <p>We eliminate the noise.</p>
-                <p className="text-terminal-green">We deliver the essence.</p>
-              </div>
-            </Section>
-
-            {/* Contact */}
-            <Section>
-              <SectionLabel>{'>'} CONTACT</SectionLabel>
-              <a
-                href="mailto:julian@onomous.ai"
-                className="text-terminal-green hover:underline underline-offset-4"
-              >
-                julian@onomous.ai
-              </a>
-            </Section>
-
-            {/* Footer */}
-            <div className="border border-terminal-border p-6 md:p-8 text-center">
-              <div className="text-terminal-muted text-xs tracking-[0.3em]">
-                NOMOS // ONOMA // ONOMOUS
-              </div>
+              )}
+              {phase >= 4 && (
+                <p className="mt-6">
+                  <TypeWriter
+                    text="Every system is governed by a fundamental Law—a Nomos. When the noise is eliminated, the logic becomes autonomous."
+                    speed={10}
+                    onComplete={() => setPhase(5)}
+                  />
+                </p>
+              )}
             </div>
-          </>
+          </Section>
+        )}
+
+        {/* Mission */}
+        {phase >= 5 && (
+          <Section>
+            <SectionLabel>{'>'} MISSION</SectionLabel>
+            <p className="text-terminal-dim leading-relaxed italic border-l-2 border-terminal-muted pl-4">
+              <TypeWriter
+                text={`"To derive the fundamental laws of any system—digital, biological, or protocol-based—and reduce them to their most efficient, autonomous, and resilient essence."`}
+                speed={10}
+                onComplete={() => setPhase(6)}
+              />
+            </p>
+          </Section>
+        )}
+
+        {/* Domains */}
+        {phase >= 6 && (
+          <Section>
+            <SectionLabel>{'>'} DOMAINS</SectionLabel>
+            <div className="space-y-6">
+              <div>
+                <div className="text-terminal-green text-sm mb-1">
+                  <TypeWriter text="01 // SOFTWARE" speed={15} onComplete={() => setPhase(7)} />
+                </div>
+                {phase >= 7 && (
+                  <p className="text-terminal-dim text-sm leading-relaxed">
+                    <TypeWriter
+                      text="Reducing monolithic codebases into agentic, self-governing logic."
+                      speed={10}
+                      onComplete={() => setPhase(8)}
+                    />
+                  </p>
+                )}
+              </div>
+              {phase >= 8 && (
+                <div>
+                  <div className="text-terminal-green text-sm mb-1">
+                    <TypeWriter text="02 // BIOLOGICAL + FUNDAMENTAL" speed={15} onComplete={() => setPhase(9)} />
+                  </div>
+                  {phase >= 9 && (
+                    <p className="text-terminal-dim text-sm leading-relaxed">
+                      <TypeWriter
+                        text="Distilling complex sequences into fundamental, executable laws."
+                        speed={10}
+                        onComplete={() => setPhase(10)}
+                      />
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
+          </Section>
+        )}
+
+        {/* Execution */}
+        {phase >= 10 && (
+          <Section>
+            <SectionLabel>{'>'} EXECUTION</SectionLabel>
+            <div className="space-y-2 text-terminal-dim">
+              <p>
+                <TypeWriter text="We find the simplest version of the truth." speed={15} onComplete={() => setPhase(11)} />
+              </p>
+              {phase >= 11 && (
+                <p>
+                  <TypeWriter text="We eliminate the noise." speed={15} onComplete={() => setPhase(12)} />
+                </p>
+              )}
+              {phase >= 12 && (
+                <p className="text-terminal-green">
+                  <TypeWriter text="We deliver the essence." speed={15} onComplete={() => setPhase(13)} />
+                </p>
+              )}
+            </div>
+          </Section>
+        )}
+
+        {/* Contact */}
+        {phase >= 13 && (
+          <Section>
+            <SectionLabel>{'>'} CONTACT</SectionLabel>
+            <a
+              href="mailto:julian@onomous.ai"
+              className="text-terminal-green hover:underline underline-offset-4"
+            >
+              <TypeWriter text="julian@onomous.ai" speed={20} onComplete={() => setPhase(14)} />
+            </a>
+          </Section>
+        )}
+
+        {/* Footer */}
+        {phase >= 14 && (
+          <div className="border border-terminal-border p-6 md:p-8 text-center">
+            <div className="text-terminal-muted text-xs tracking-[0.3em]">
+              <TypeWriter text="NOMOS // ONOMA // ONOMOUS" speed={25} />
+            </div>
+          </div>
         )}
       </div>
     </div>
