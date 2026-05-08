@@ -1,21 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
-  --color-terminal-green: #ffffff;
-  --color-terminal-dim: #cccccc;
-  --color-terminal-muted: #666666;
-  --color-terminal-bg: #0a0a0a;
-  --color-terminal-surface: #111111;
-  --color-terminal-border: #1a1a1a;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --color-canvas: #0a0a0d;
+  --color-surface: #111114;
+  --color-line: #1f1f24;
+  --color-ink: #fafafa;
+  --color-mute: #a0a0a8;
+  --color-dim: #6a6a72;
 }
 
 html {
+  background: var(--color-canvas);
   scrollbar-width: thin;
-  scrollbar-color: var(--color-terminal-muted) var(--color-terminal-bg);
+  scrollbar-color: var(--color-dim) var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 ::selection {
-  background: var(--color-terminal-green);
-  color: var(--color-terminal-bg);
+  background: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pipeline-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.animate-fadein {
+  animation: fadein 0.6s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadein {
+    animation: none;
+    opacity: 1;
+  }
 }
